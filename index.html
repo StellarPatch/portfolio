@@ -1,50 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>William Lin — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-    <header>
-        <a href="#propos">A propos</a>
-        <a href="#projets">Projets</a>
-        <a href="#contact">Contact</a>
-    </header>
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+  </div>
 
-    <main id="main">
-        <section id="propos">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, molestias hic eaque inventore quidem at natus reiciendis minima nostrum fugiat quas asperiores totam sint consequatur eveniet ad iusto? Magni, eum.
-        </section>
+  <!-- BACKGROUND -->
+  <div class="grid-bg"></div>
+  <div class="grid-overlay"></div>
+  <div class="scanlines"></div>
 
-        <section id="projets">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis saepe nobis inventore accusantium eveniet sed voluptas? Est a corporis consequatur laboriosam ipsa laborum veritatis quaerat, in, perferendis odio vero enim.
-        </section>
+  <!-- HEX DECORATION (LEFT) -->
+  <div class="hex-deco" aria-hidden="true">
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+  </div>
 
-        <section id="contact">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, dicta magnam? Tenetur, a. Vero debitis, cumque quia atque facere quae laborum, qui nihil voluptate repellat consequatur rem, voluptatum quam cum.
-        </section>
-    </main>
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#hero" class="nav-logo">W<span>.</span>LIN</a>
+    <ul class="nav-links">
+      <li><a href="#hero">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <div id="un" class="barreHorizontal"></div>
-    <div id="deux" class="barreHorizontal"></div>
-    <div id="trois" class="barreVertical"></div>
-    <div id="quatre" class="barreVertical"></div>
-    
-    <div class="start">
-        <div id="OuterCompass">
-            <div id="CoreCompass">
-            </div>
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <p class="hero-eyebrow">◈ Portfolio — Full Stack Developer</p>
+    <h1 class="hero-title">
+      <span class="glitch-wrap" data-text="William">William</span><br>
+      <span class="outline">Lin</span><span class="pink">.</span>
+    </h1>
+    <p class="hero-sub">
+      Étudiant en <strong>BUT MMI</strong> à l'IUT de Mulhouse. Je conçois des expériences web utiles, modernes et cohérentes — de l'interface à l'architecture.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">Voir mes projets</a>
+      <a href="#contact" class="btn-ghost">Me contacter</a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Défiler</span>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="section-header reveal">
+      <p class="section-label">◈ 01 — À propos</p>
+      <h2 class="section-title">Qui suis-je<span class="accent"> ?</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          Pendant longtemps, je croyais que les grandes réussites étaient réservées à quelques prodiges. Jusqu'au jour où j'ai compris qu'<strong>il n'y avait pas de magie</strong> : seulement des personnes qui apprennent, expérimentent, construisent — puis recommencent.
+        </p>
+        <p>
+          Aujourd'hui, je poursuis cette démarche en <strong>BUT MMI à l'IUT de Mulhouse</strong>. Je me forme au développement web, à l'UI/UX, à la communication digitale et à la création numérique.
+        </p>
+        <p>
+          J'aime concevoir des interfaces avec une <strong>attention particulière portée à l'utilisateur</strong>, à l'esthétique et à la qualité visuelle. Chaque choix doit avoir une intention claire.
+        </p>
+        <div style="margin-top: 2rem;">
+          <a href="mailto:william.lin1708@gmail.com" class="btn-primary">Me contacter →</a>
         </div>
-        <div id="titre">Bienvenue</div>
+      </div>
+      <div class="about-info reveal">
+        <div class="info-block">
+          <p class="label">Formation</p>
+          <p class="value">BUT MMI — IUT de Mulhouse</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Période</p>
+          <p class="value">Sept. 2025 – Juin 2028</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Bac obtenu</p>
+          <p class="value">Physique-Chimie & NSI — Lycée Schwilgué, Sélestat</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expérience</p>
+          <p class="value">Serveur — Konoha Sushi (nov. 2025 – présent)</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Langues</p>
+          <p class="value">Français (natif) · Anglais (professionnel)</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Localisation</p>
+          <p class="value">Sélestat, Grand Est, France</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div id="index0">
-        <img src="img/WeakSunihaster.png" alt="">
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <p class="section-label">◈ 02 — Compétences</p>
+      <h2 class="section-title">Ce que je <span class="accent">maîtrise</span></h2>
+      <div class="section-line"></div>
     </div>
+    <div class="skills-grid">
 
-    <script src="js/script.js"></script>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">🖥️</div>
+        <p class="skill-card-title">FRONT-END</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>HTML / CSS</span><span>70%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-w="70"></div></div>
+          <div class="skill-bar-label"><span>JavaScript</span><span>55%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-w="55"></div></div>
+          <div class="skill-bar-label"><span>React (apprentissage)</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-w="75"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">⚙️</div>
+        <p class="skill-card-title">BACK-END</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>PHP</span><span>50%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-w="50"></div></div>
+          <div class="skill-bar-label"><span>MySQL / SQL</span><span>70%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-w="70"></div></div>
+          
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">🎨</div>
+        <p class="skill-card-title">DESIGN & UI/UX</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Figma</span><span>80%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-w="80"></div></div>
+          <div class="skill-bar-label"><span>Prototypage</span><span>60%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-w="60"></div></div>
+          <div class="skill-bar-label"><span>Identité visuelle</span><span>70%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-w="70"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">🛠️</div>
+        <p class="skill-card-title">OUTILS & MÉTHODES</p>
+        <p class="skill-card-list">Git / GitHub · VS Code · Gestion de projet · Autonomie</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <p class="section-label">◈ 03 — Projets</p>
+      <h2 class="section-title">Mes <span class="accent">réalisations</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+
+      <a class="project-card reveal" href="https://sae203.is-best.net">
+        <div class="project-thumb">
+          <span class="project-thumb-icon"><img src="img/SAE203Hero.png" alt=""></span>
+        </div>
+        <div class="project-body">
+          <p class="project-tag">◈ Web · UI/UX</p>
+          <h3 class="project-title">SAE 2.03 - Honkai: Star Rail</h3>
+          <p class="project-desc">Conception et développement d'un site web lié à une base de donnée. Principe d'un simulateur de gacha et design inspiré du jeu Honkai: Star Rail.</p>
+          <div class="project-stack">
+            <span class="stack-pill">HTML</span>
+            <span class="stack-pill">CSS</span>
+            <span class="stack-pill">JavaScript</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">PHP</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card reveal" href="https://hydrodrom.is-best.net/">
+        <div class="project-thumb">
+          <span class="project-thumb-icon"><img src="img/SAE202Hero.png" alt=""></span>
+        </div>
+        <div class="project-body">
+          <p class="project-tag">◈ Design · Prototype · CMS</p>
+          <h3 class="project-title">SAE 2.02 - Festival Hydrodrom</h3>
+          <p class="project-desc">Dans le cadre du BUT MMI, conception d'un service en équipe, notamment une landing page. Maquettes et prototype interactif sur Figma.</p>
+          <div class="project-stack">
+            <span class="stack-pill">Figma</span>
+            <span class="stack-pill">UI/UX</span>
+            <span class="stack-pill">Prototypage</span>
+            <span class="stack-pill">WordPress</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card reveal" href="https://stellarpatch.github.io/SAE105/index.html">
+        <div class="project-thumb">
+          <span class="project-thumb-icon"><img src="img/CarnetdeBord.webp" alt=""></span>
+        </div>
+        <div class="project-body">
+          <p class="project-tag">◈ Web · UI/UX</p>
+          <h3 class="project-title">SAE 1.05 - Carnet de Bord</h3>
+          <p class="project-desc">Développement d'un site web dynamique répondant à un besoin de communication numérique.</p>
+          <div class="project-stack">
+            <span class="stack-pill">HTML</span>
+            <span class="stack-pill">CSS</span>
+            <span class="stack-pill">JavaScript</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <p class="section-label">◈ 04 — Contact</p>
+      <h2 class="section-title">Travaillons <span class="accent">ensemble</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-intro reveal">
+        <p>Vous avez un projet, une opportunité ou simplement envie d'échanger ? Je suis disponible pour des collaborations, des stages ou tout projet créatif et web.</p>
+        <p>N'hésitez pas à me contacter via le formulaire ou directement via mes coordonnées ci-dessous.</p>
+        <div class="contact-links">
+          <a href="mailto:william.lin1708@gmail.com" class="contact-link">
+            <span class="contact-link-icon">✉</span>
+            william.lin1708@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/william-lin-développeur-web" target="_blank" class="contact-link">
+            <span class="contact-link-icon">in</span>
+            LinkedIn — William Lin
+          </a>
+          <a href="https://stellarpatch.github.io/portfolio/" target="_blank" class="contact-link">
+            <span class="contact-link-icon">⬡</span>
+            stellarpatch.github.io/portfolio
+          </a>
+        </div>
+      </div>
+      <div class="contact-form reveal" id="contactForm">
+        <div class="form-field">
+          <label for="fname">Votre nom</label>
+          <input type="text" id="fname" placeholder="Yacine Charadi" />
+        </div>
+        <div class="form-field">
+          <label for="femail">Votre email</label>
+          <input type="email" id="femail" placeholder="yacine@exemple.fr" />
+        </div>
+        <div class="form-field">
+          <label for="fmsg">Message</label>
+          <textarea id="fmsg" placeholder="Dites-moi tout…"></textarea>
+        </div>
+        <div class="form-submit">
+          <button class="btn-primary" onclick="submitForm()">Envoyer →</button>
+        </div>
+        <p class="form-msg" id="formMsg">✦ Message envoyé ! Je vous répondrai rapidement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>© 2026 <span>William Lin</span> — BUT MMI · IUT de Mulhouse</p>
+  </footer>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="js/script.js"></script>
 </body>
 </html>

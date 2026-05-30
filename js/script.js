@@ -1,62 +1,71 @@
-const body = document.body;
-
-const barre1 = document.getElementById("un");
-const barre2 = document.getElementById("deux");
-const barre3 = document.getElementById("trois");
-const barre4 = document.getElementById("quatre");
-
-const sun = document.getElementById("index0");
-const compass = document.querySelector(".start");
-const core = document.getElementById("CoreCompass");
-const titre = document.getElementById("titre");
-const main = document.getElementById("main");
-
-var story = 0;
-
-sun.classList.toggle("animation")
-
-body.addEventListener("click", start);
-
-function start() {
-    let barres = [barre2, barre4, barre1, barre3]
-    let timer = 0;
-
-    if (story == 0) {
-
-        sun.classList.toggle("animation");
-        setTimeout(() => sun.classList.toggle("inactive"),10 )
-
-        barres.forEach(element => {
-            timer += 250;
-            setTimeout(() => { element.classList.toggle("active") }, timer)
-        });
-
-        setTimeout(() => { compass.classList.toggle("active") }, 1750);
-        setTimeout(() => { core.classList.toggle("animation") }, 3500);
-
-        setTimeout(() => {titre.classList.toggle("active")} , 3500)
-
-        story += 1
+/* CURSOR */
+    const dot  = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function animateCursor() {
+      dot.style.left  = mx + 'px';
+      dot.style.top   = my + 'px';
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(animateCursor);
     }
-    else {
-        if (story == 1) {
-            timer = 0;
-            barres.forEach(element => {
-                timer += 250;
-                setTimeout(() => { element.classList.toggle("active") }, timer)
-            });
-            setTimeout(() => { core.classList.toggle("animation") }, 1750);
-            setTimeout(() => { compass.classList.toggle("active") }, 1750);
+    animateCursor();
 
-            setTimeout(() => {main.classList.add("active")},2000);
-            setTimeout(() => {main.classList.add("transition")},2000)
-
-            setTimeout(() => {titre.classList.toggle("active")} , 1500)
-            story += 1
+    /* SCROLL REVEAL */
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
         }
-    }
-}
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
 
-function displayBtn(){
-    let x=["start","option","exit"];
-}
+    /* SKILL BARS */
+    const bars = document.querySelectorAll('.skill-bar-fill');
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.dataset.w + '%';
+        }
+      });
+    }, { threshold: 0.5 });
+    bars.forEach(b => barObserver.observe(b));
+
+    /* CONTACT FORM (Demo) */
+    function submitForm() {
+      const name  = document.getElementById('fname').value.trim();
+      const email = document.getElementById('femail').value.trim();
+      const msg   = document.getElementById('fmsg').value.trim();
+      const msgEl = document.getElementById('formMsg');
+      if (!name || !email || !msg) {
+        msgEl.textContent = '⚠ Merci de remplir tous les champs.';
+        msgEl.style.color = '#ff8080';
+        msgEl.style.display = 'block';
+        return;
+      }
+      msgEl.textContent = '✦ Message envoyé ! Je vous répondrai rapidement.';
+      msgEl.style.color = 'var(--pink-glow)';
+      msgEl.style.display = 'block';
+      document.getElementById('fname').value = '';
+      document.getElementById('femail').value = '';
+      document.getElementById('fmsg').value = '';
+    }
+
+    /* ACTIVE NAV */
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 200) current = sec.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current
+          ? 'var(--pink-glow)' : '';
+      });
+    });
