@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>William Lin — Full Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
 
   <!-- CURSOR -->
@@ -24,27 +28,50 @@
 
   <!-- HEX DECORATION (LEFT) -->
   <div class="hex-deco" aria-hidden="true">
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
-    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66"><polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5"/></svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
+    <svg class="hex-svg" width="58" height="66" viewBox="0 0 58 66">
+      <polygon points="29,2 56,17.5 56,48.5 29,64 2,48.5 2,17.5" />
+    </svg>
   </div>
 
   <!-- ── NAV ── -->
   <nav>
     <a href="#hero" class="nav-logo">W<span>.</span>LIN</a>
-    <ul class="nav-links">
-      <li><a href="#hero">Accueil</a></li>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" onclick="closeMenu()">Accueil</a></li>
+      <li><a href="#about" onclick="closeMenu()">À propos</a></li>
+      <li><a href="#skills" onclick="closeMenu()">Compétences</a></li>
+      <li><a href="#projects" onclick="closeMenu()">Projets</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
   </nav>
 
@@ -56,7 +83,8 @@
       <span class="outline">Lin</span><span class="pink">.</span>
     </h1>
     <p class="hero-sub">
-      Étudiant en <strong>BUT MMI</strong> à l'IUT de Mulhouse. Je conçois des expériences web utiles, modernes et cohérentes — de l'interface à l'architecture.
+      Étudiant en <strong>BUT MMI</strong> à l'IUT de Mulhouse. Je conçois des expériences web utiles, modernes et
+      cohérentes — de l'interface à l'architecture.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">Voir mes projets</a>
@@ -78,13 +106,17 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          Pendant longtemps, je croyais que les grandes réussites étaient réservées à quelques prodiges. Jusqu'au jour où j'ai compris qu'<strong>il n'y avait pas de magie</strong> : seulement des personnes qui apprennent, expérimentent, construisent — puis recommencent.
+          Pendant longtemps, je croyais que les grandes réussites étaient réservées à quelques prodiges. Jusqu'au jour
+          où j'ai compris qu'<strong>il n'y avait pas de magie</strong> : seulement des personnes qui apprennent,
+          expérimentent, construisent — puis recommencent.
         </p>
         <p>
-          Aujourd'hui, je poursuis cette démarche en <strong>BUT MMI à l'IUT de Mulhouse</strong>. Je me forme au développement web, à l'UI/UX, à la communication digitale et à la création numérique.
+          Aujourd'hui, je poursuis cette démarche en <strong>BUT MMI à l'IUT de Mulhouse</strong>. Je me forme au
+          développement web, à l'UI/UX, à la communication digitale et à la création numérique.
         </p>
         <p>
-          J'aime concevoir des interfaces avec une <strong>attention particulière portée à l'utilisateur</strong>, à l'esthétique et à la qualité visuelle. Chaque choix doit avoir une intention claire.
+          J'aime concevoir des interfaces avec une <strong>attention particulière portée à l'utilisateur</strong>, à
+          l'esthétique et à la qualité visuelle. Chaque choix doit avoir une intention claire.
         </p>
         <div style="margin-top: 2rem;">
           <a href="mailto:william.lin1708@gmail.com" class="btn-primary">Me contacter →</a>
@@ -133,11 +165,17 @@
         <p class="skill-card-title">FRONT-END</p>
         <div class="skill-bar-wrap">
           <div class="skill-bar-label"><span>HTML / CSS</span><span>70%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-w="70"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-w="70"></div>
+          </div>
           <div class="skill-bar-label"><span>JavaScript</span><span>55%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-w="55"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-w="55"></div>
+          </div>
           <div class="skill-bar-label"><span>React (apprentissage)</span><span>75%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-w="75"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-w="75"></div>
+          </div>
         </div>
       </div>
 
@@ -146,10 +184,14 @@
         <p class="skill-card-title">BACK-END</p>
         <div class="skill-bar-wrap">
           <div class="skill-bar-label"><span>PHP</span><span>50%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-w="50"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-w="50"></div>
+          </div>
           <div class="skill-bar-label"><span>MySQL / SQL</span><span>70%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-w="70"></div></div>
-          
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-w="70"></div>
+          </div>
+
         </div>
       </div>
 
@@ -158,11 +200,17 @@
         <p class="skill-card-title">DESIGN & UI/UX</p>
         <div class="skill-bar-wrap">
           <div class="skill-bar-label"><span>Figma</span><span>80%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-w="80"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-w="80"></div>
+          </div>
           <div class="skill-bar-label"><span>Prototypage</span><span>60%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-w="60"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-w="60"></div>
+          </div>
           <div class="skill-bar-label"><span>Identité visuelle</span><span>70%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-w="70"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-w="70"></div>
+          </div>
         </div>
       </div>
 
@@ -191,7 +239,8 @@
         <div class="project-body">
           <p class="project-tag">◈ Web · UI/UX</p>
           <h3 class="project-title">SAE 2.03 - Honkai: Star Rail</h3>
-          <p class="project-desc">Conception et développement d'un site web lié à une base de donnée. Principe d'un simulateur de gacha et design inspiré du jeu Honkai: Star Rail.</p>
+          <p class="project-desc">Conception et développement d'un site web lié à une base de donnée. Principe d'un
+            simulateur de gacha et design inspiré du jeu Honkai: Star Rail.</p>
           <div class="project-stack">
             <span class="stack-pill">HTML</span>
             <span class="stack-pill">CSS</span>
@@ -209,7 +258,8 @@
         <div class="project-body">
           <p class="project-tag">◈ Design · Prototype · CMS</p>
           <h3 class="project-title">SAE 2.02 - Festival Hydrodrom</h3>
-          <p class="project-desc">Dans le cadre du BUT MMI, conception d'un service en équipe, notamment une landing page. Maquettes et prototype interactif sur Figma.</p>
+          <p class="project-desc">Dans le cadre du BUT MMI, conception d'un service en équipe, notamment une landing
+            page. Maquettes et prototype interactif sur Figma.</p>
           <div class="project-stack">
             <span class="stack-pill">Figma</span>
             <span class="stack-pill">UI/UX</span>
@@ -226,7 +276,8 @@
         <div class="project-body">
           <p class="project-tag">◈ Web · UI/UX</p>
           <h3 class="project-title">SAE 1.05 - Carnet de Bord</h3>
-          <p class="project-desc">Développement d'un site web dynamique répondant à un besoin de communication numérique.</p>
+          <p class="project-desc">Développement d'un site web dynamique répondant à un besoin de communication
+            numérique.</p>
           <div class="project-stack">
             <span class="stack-pill">HTML</span>
             <span class="stack-pill">CSS</span>
@@ -247,7 +298,8 @@
     </div>
     <div class="contact-inner">
       <div class="contact-intro reveal">
-        <p>Vous avez un projet, une opportunité ou simplement envie d'échanger ? Je suis disponible pour des collaborations, des stages ou tout projet créatif et web.</p>
+        <p>Vous avez un projet, une opportunité ou simplement envie d'échanger ? Je suis disponible pour des
+          collaborations, des stages ou tout projet créatif et web.</p>
         <p>N'hésitez pas à me contacter via le formulaire ou directement via mes coordonnées ci-dessous.</p>
         <div class="contact-links">
           <a href="mailto:william.lin1708@gmail.com" class="contact-link">
@@ -293,4 +345,5 @@
   <!-- ── SCRIPTS ── -->
   <script src="js/script.js"></script>
 </body>
+
 </html>
